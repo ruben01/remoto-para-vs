@@ -10,7 +10,7 @@ namespace smsGitVsSln.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application. prueba";
+            ViewBag.Message = "Sistema de Gestrion de recursos Tecnologicos ASP.NET MVC 4";
 
             return View();
         }
