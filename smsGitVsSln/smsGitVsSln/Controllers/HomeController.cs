@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Twilio.TwiML;
+using Twilio.TwiML.Mvc;
 
 namespace smsGitVsSln.Controllers
 {
@@ -12,7 +14,16 @@ namespace smsGitVsSln.Controllers
         {
             ViewBag.Message = "Sistema de Gestrion de recursos Tecnologicos ASP.NET MVC 4";
 
-            return View();
+            //prueba
+
+            var response = new TwilioResponse();
+            response.Say("Welcome Monkey");
+
+            return new TwiMLResult(response);
+
+            //end
+
+           // return View();
         }
 
         public ActionResult About()
