@@ -17,7 +17,7 @@ namespace smsGitVsSln.Controllers
             //prueba
 
             var response = new TwilioResponse();
-            response.Say("Welcome Guys this is a test of Sigeret. Elianny and Saul");
+            response.Say("Gracias Por llamar a Sigeret. Una empresa al servicio de sus clientes");
 
             return new TwiMLResult(response);
 
