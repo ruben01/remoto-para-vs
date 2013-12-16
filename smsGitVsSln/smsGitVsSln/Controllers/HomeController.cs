@@ -17,7 +17,7 @@ namespace smsGitVsSln.Controllers
             //prueba
 
             var response = new TwilioResponse();
-            response.Say("Welcome Monkey");
+            response.Say("Welcome Guys this is a test of Sigeret. Elianny and Saul");
 
             return new TwiMLResult(response);
 
