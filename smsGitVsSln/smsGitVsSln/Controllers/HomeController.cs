@@ -14,16 +14,9 @@ namespace smsGitVsSln.Controllers
         {
             ViewBag.Message = "Sistema de Gestrion de recursos Tecnologicos ASP.NET MVC 4";
 
-            //prueba
 
-            var response = new TwilioResponse();
-            response.Say("Gracias Por llamar a Sigeret. Una empresa al servicio de sus clientes");
 
-            return new TwiMLResult(response);
-
-            //end
-
-           // return View();
+           return View();
         }
 
         public ActionResult About()
