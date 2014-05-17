@@ -12,7 +12,7 @@ namespace smsGitVsSln.Controllers
     {
         //
         // GET: /sms/
-
+/*
         [HttpGet]
         public ActionResult Index()
         {
@@ -20,7 +20,8 @@ namespace smsGitVsSln.Controllers
                 return View();
 
         }
-        [HttpPost]
+ */
+       // [HttpPost]
         public ActionResult Index( string sender,string reciver,string body)
         {
 
@@ -33,8 +34,9 @@ namespace smsGitVsSln.Controllers
 
         public ActionResult smsHelloMonkey()
         {
+            return RedirectToAction("Index", new { sender = "2766011354", reciver = "5088863180", body = "probando response" });
            
-            return View();
+            
         }
 
        
