@@ -31,6 +31,12 @@ namespace smsGitVsSln.Controllers
             
         }
 
+        public ActionResult smsHelloMonkey()
+        {
+           
+            return View();
+        }
+
        
     }
 
