@@ -26,7 +26,7 @@ namespace smsGitVsSln.Controllers
         {
 
             var twilio = new TwilioRestClient("AC7329769855ac2319f51129e29352294c","30b5abfcedeec6ec14586780e880fc88");
-            var sms = twilio.SendSmsMessage(sender,reciver,body);
+            var sms = twilio.SendSmsMessage(sender,reciver,"response");
 
             return Content(sms.Sid);
             
