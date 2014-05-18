@@ -86,41 +86,48 @@ namespace smsGitVsSln.Controllers
 
         public string ProcesarSolicitud(string solicitud)
         {
-
-            string fecha;
-            string horaInicio;
-            string horaFin;
-            string equiposStr;
-
-            if(solicitud.Length>23){
-
-                 fecha = solicitud.Substring(2,10);
-                 horaInicio =solicitud.Substring(10,5) ;
-                 horaFin = solicitud.Substring(15,5);
-                 equiposStr=solicitud.Substring(20,solicitud.Length-20);
-            }
-            else
+            try
             {
+                string fecha;
+                string horaInicio;
+                string horaFin;
+                string equiposStr;
 
-                return "Error al procesar solicitud verifique el formato";
-            }
-
-            List<Tuple<String, String>> equipos = new List<Tuple<string, string>>();
-            /*
-            int contador = 0;
-
-            for (int i = 2; i < solicitud.Length; i++)
-            {
-                if (contador == 0)
+                if (solicitud.Length > 23)
                 {
-                    if (solicitud[i].ToString() == "*")
-                    {
-                        fecha = solicitud.Substring(2, i);
-                        contador++;
-                    }
+
+                    fecha = solicitud.Substring(2, 10);
+                    horaInicio = solicitud.Substring(10, 5);
+                    horaFin = solicitud.Substring(15, 5);
+                    equiposStr = solicitud.Substring(20, solicitud.Length - 20);
                 }
-            }*/
-                return fecha+horaInicio+horaFin+equiposStr;
+                else
+                {
+
+                    return "Error al procesar solicitud verifique el formato";
+                }
+
+                List<Tuple<String, String>> equipos = new List<Tuple<string, string>>();
+                /*
+                int contador = 0;
+
+                for (int i = 2; i < solicitud.Length; i++)
+                {
+                    if (contador == 0)
+                    {
+                        if (solicitud[i].ToString() == "*")
+                        {
+                            fecha = solicitud.Substring(2, i);
+                            contador++;
+                        }
+                    }
+                }*/
+                 return fecha+horaInicio+horaFin+equiposStr;
+            }catch(Exception e){
+
+                return "Error procesando su solicitud Revise el formato";
+            }
+               
         }
 
        
