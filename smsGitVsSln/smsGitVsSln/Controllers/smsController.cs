@@ -33,10 +33,6 @@ namespace smsGitVsSln.Controllers
                     respuesta = "1 Nueva Solicitud(ayuda)\n2 Equipos(ayuda)\n3 Formato Fecha\n4 Fomato Hora";
                     break;
 
-                case "AYUDA":
-                    respuesta = "1 Nueva Solicitud(ayuda)\n2 Equipos(ayuda)\n3 Formato Fecha";
-                    break;
-
                 case "1":
 
                     respuesta = "Formato Solicitud:\n *fecha*horaInicio*horaFin*CodigoEquipo*cantidad*CodigoEquipo2*cantidad";
@@ -47,11 +43,11 @@ namespace smsGitVsSln.Controllers
                     break;
                 case "3":
 
-                    respuesta = "Dia/Mes/año Ejemplo 24/12/1999";
+                    respuesta = "Formato Fecha\nDia/Mes/año \nEjemplo 24/12/1999";
                     break;
                 case "4":
 
-                    respuesta = "Formato 24H Ejemplo 07:00 ó 20:00 hora fin mayor a la hora inicio";
+                    respuesta = "Formato Hora\n24H Ejemplo \n07:00  \n20:00 \nhora fin mayor a la hora inicio";
                     break;
                 default:
                     respuesta = "No se Reconoce la Instruccion";
