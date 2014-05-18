@@ -26,9 +26,13 @@ namespace smsGitVsSln.Controllers
         {
             string sender = "2766011354";
             body = body.ToLower();
-
+            string solicitud="";
             string respuesta;
-            string solicitud = body.Substring(0,2);
+            //si la longitud del mensaje enviado es mayor a 2 entonces procedemos a sacar una subcadena para verificar si es una solicitud
+            if (body.Length > 2)
+            {
+                solicitud = body.Substring(0, 2);
+            }
 
             if (solicitud == "**")
             {
@@ -83,7 +87,40 @@ namespace smsGitVsSln.Controllers
         public string ProcesarSolicitud(string solicitud)
         {
 
-            return "Solicitud Procesada";
+            string fecha = solicitud.Substring(2,10);
+            string horaInicio =solicitud.Substring(10,5) ;
+            string horaFin = solicitud.Substring(15,5);
+            string equiposStr=solicitud.Substring(20,solicitud.Length-20);
+
+            if(solicitud.Length>23){
+
+                 fecha = solicitud.Substring(2,10);
+                 horaInicio =solicitud.Substring(10,5) ;
+                 horaFin = solicitud.Substring(15,5);
+                 equiposStr=solicitud.Substring(20,solicitud.Length-20);
+            }
+            else
+            {
+
+                return "Error al procesar solicitud verifique el formato";
+            }
+
+            List<Tuple<String, String>> equipos = new List<Tuple<string, string>>();
+            /*
+            int contador = 0;
+
+            for (int i = 2; i < solicitud.Length; i++)
+            {
+                if (contador == 0)
+                {
+                    if (solicitud[i].ToString() == "*")
+                    {
+                        fecha = solicitud.Substring(2, i);
+                        contador++;
+                    }
+                }
+            }*/
+                return fecha+horaInicio+horaFin+equiposStr;
         }
 
        
