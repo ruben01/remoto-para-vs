@@ -87,10 +87,10 @@ namespace smsGitVsSln.Controllers
         public string ProcesarSolicitud(string solicitud)
         {
 
-            string fecha = solicitud.Substring(2,10);
-            string horaInicio =solicitud.Substring(10,5) ;
-            string horaFin = solicitud.Substring(15,5);
-            string equiposStr=solicitud.Substring(20,solicitud.Length-20);
+            string fecha;
+            string horaInicio;
+            string horaFin;
+            string equiposStr;
 
             if(solicitud.Length>23){
 
