@@ -92,7 +92,7 @@ namespace smsGitVsSln.Controllers
                 string horaInicio;
                 string horaFin;
                 string equiposStr;
-
+                fecha = solicitud.Substring(0, 10);
                 if (solicitud.Length > 23)
                 {
 
@@ -122,7 +122,7 @@ namespace smsGitVsSln.Controllers
                         }
                     }
                 }*/
-                 return fecha+horaInicio+horaFin+equiposStr;
+                return fecha + "|" + horaInicio + "|" + horaFin + "|" + equiposStr;
             }catch(Exception e){
 
                 return "Error procesando su solicitud Revise el formato";
