@@ -92,7 +92,7 @@ namespace smsGitVsSln.Controllers
                 string horaInicio;
                 string horaFin;
                 string equiposStr;
-                fecha = solicitud.Substring(0, 10);
+               
                 if (solicitud.Length > 23)
                 {
 
