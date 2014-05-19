@@ -97,9 +97,9 @@ namespace smsGitVsSln.Controllers
                 {
 
                     fecha = solicitud.Substring(2, 10);
-                    horaInicio = solicitud.Substring(10, 5);
-                    horaFin = solicitud.Substring(15, 5);
-                    equiposStr = solicitud.Substring(20, solicitud.Length - 20);
+                    horaInicio = solicitud.Substring(13, 5);
+                    horaFin = solicitud.Substring(18, 5);
+                    equiposStr = solicitud.Substring(23, solicitud.Length - 20);
                 }
                 else
                 {
